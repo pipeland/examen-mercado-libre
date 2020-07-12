@@ -33,8 +33,8 @@ millón de peticiones por segundo).
 Test-Automáticos, Code coverage > 80%.
 
 ## Instalacion
-* Tener intalado `node 12` y `docker`
-* Instalar dependencias
+* Tener instalado `node 12` y `docker`
+* Instalar dependencias node
 ``` swift
 npm install
 ```
@@ -48,7 +48,7 @@ npm run test
 npm run coverage
 ```
 ## Eslint
-Verficar reglas de estructura de codigo
+Verficar reglas de estructura de código
 ``` swift
 npm run lint
 ```
@@ -59,10 +59,10 @@ npm run local
 ```
 ## Desarrollo
 ### Nivel 1:
-El programa esta desarrollado en `node (version 12)` exponiedo los servicios con `express` y usando arquitectura `serverless` para soportar la 
+El programa esta desarrollado en `node (version 12)` exponiendo los servicios con `express` y usando arquitectura `serverless` para soportar la 
 carga de peticiones.
 ### Nivel 2:
-El API esta hosteada en `aws` usando `api gateway` y `lambda`, se esta usando una base de datos no sql `Mongo`, instalada en `Mongo Atlas` 
+El API esta hosteada en `aws` usando `api gateway` y `lambda`, se está usando una base de datos no sql `Mongo`, instalada en `Mongo Atlas` 
 #### Local:
 Endpoint:
 ``` swift

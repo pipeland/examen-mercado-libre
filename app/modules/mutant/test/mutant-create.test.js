@@ -118,3 +118,18 @@ describe('IsMutant', () => {
     });
   });
 });
+describe('Validate Uniq DNA', () => {
+  beforeEach(async () => {
+    await mutantModel.deleteMany();
+    await mutantModel.create({dna: ['ATGCGA', 'CAGTGC', 'TTATGT', 'AGAAGG', 'CCCATA', 'TCACTG'], isMutant: true});
+  });
+  test('Save only one registry for AND', async () => {
+    const res = await requestTest(app)
+    .post('/api/v1/mutant')
+    .send({dna: ['ATGCGA', 'CAGTGC', 'TTATGT', 'AGAAGG', 'CCCATA', 'TCACTG']});
+    expect(res.status).toBe(200);
+    expect(res.body).toEqual({isMutant: true});
+    let count = await mutantModel.countDocuments();
+    expect(count).toEqual(1);
+  });
+});

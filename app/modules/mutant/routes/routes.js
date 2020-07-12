@@ -33,7 +33,6 @@ module.exports = function mutantRoutes(app) {
     }
    */
   Router.post('/', mutantController.isMutant);
-  Router.get('/', mutantController.isMutant);
   logInfo(`/api/${config.apiVersion}/mutant`);
   app.use(`/api/${config.apiVersion}/mutant`, Router);
 };

@@ -16,4 +16,5 @@ const schema = new Schema({
 schema.plugin(timestamps);
 
 schema.index({'isMutant': -1});
+schema.index({'dna': -1});
 module.exports = mongoose.model('mutant', schema);
