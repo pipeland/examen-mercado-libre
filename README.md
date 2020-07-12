@@ -53,7 +53,8 @@ Verficar reglas de estructura de código
 ``` swift
 npm run lint
 ```
-### Iniciar
+## Iniciar
+para iniciar el microservicio de forma local, correr los siguientes comandos:
 ``` swift
 docker-compose up -d
 npm run local
