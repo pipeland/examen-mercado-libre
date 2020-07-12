@@ -2,10 +2,10 @@
 ## Contenido
 - [Desafio](README.md#Desafio)
 - [Instalacion](README.md#Instalacion)
-- [Unit test](README.md#Unit test)
-- [Iniciar Microservicio](README.md#Iniciar Microservicio)
+- [Unit test](README.md#Test)
+- [Iniciar Microservicio](README.md#Iniciar)
 - [Desarrollo](README.md#Desarrollo)
-- [Estructura de carpetas](README.md#Estructura de carpetas)
+- [Estructura de carpetas](README.md#Carpetas)
 
 ## Desafio
 ### Nivel 1:
@@ -39,8 +39,8 @@ Test-Automáticos, Code coverage > 80%.
 ``` swift
 npm install
 ```
-## Unit test
-### Test
+## Test
+### Unit Test
 ``` swift
 npm run test
 ```
@@ -53,7 +53,7 @@ Verficar reglas de estructura de código
 ``` swift
 npm run lint
 ```
-### Iniciar Microservicio
+### Iniciar
 ``` swift
 docker-compose up -d
 npm run local
@@ -156,7 +156,7 @@ All files                      |     100 |      100 |     100 |     100 |
   config.js                    |     100 |      100 |     100 |     100 |
 -------------------------------|---------|----------|---------|---------|-------------------
 ```
-### Estructura de carpetas
+### Carpetas
 
 ```
 examen-mercado-libre
@@ -200,7 +200,25 @@ examen-mercado-libre
           +- test/
             |
             +-mutant-create.test.js # pruebas unitarias para el modulo
-            |
+            | 
+        +- stats/
+        |
+        +- controller/
+          |
+          +-statsController.js # controlador con el metodo stats
+          |
+        +- routes/
+          |
+          +-routes.js # define las rutas expuestas para stats
+          |
+        +- service/
+          |
+          +-statsService.js # contiene la logica de negocio consultar cuantos mutantes y humanos hay.
+          |
+        +- test/
+          |
+          +-stats-get.test.js # pruebas unitarias para el modulo
+          |      
  +- config/  # Contiene las variables usuadas en la aplicacion
  +- .esLintignore.json  # modulos ignorados por el eslint
  +- .eslintrc.yml  # reglas de codigo
