@@ -6,6 +6,7 @@
 - [Iniciar Microservicio](README.md#Iniciar)
 - [Desarrollo](README.md#Desarrollo)
 - [Estructura de carpetas](README.md#Carpetas)
+- [Prueba de carga](README.md#Carga)
 
 ## Desafio
 ### Nivel 1:
@@ -36,26 +37,26 @@ Test-Automáticos, Code coverage > 80%.
 ## Instalacion
 * Tener instalado `node 12` y `docker`
 * Instalar dependencias node
-``` swift
+```bash
 npm install
 ```
 ## Test
 ### Unit Test
-``` swift
+```bash
 npm run test
 ```
 ### Coverage
-``` swift
+```bash
 npm run coverage
 ```
 ## Eslint
 Verficar reglas de estructura de código
-``` swift
+```bash
 npm run lint
 ```
 ## Iniciar
 para iniciar el microservicio de forma local, correr los siguientes comandos:
-``` swift
+```bash
 docker-compose up -d
 npm run local
 ```
@@ -68,11 +69,11 @@ El API esta hosteada en `aws` usando `api gateway` y `lambda`, se está usando u
 #### Local:
 Servicio para validar si es mutante o humano:
 ##### Endpoint:
-``` swift
+```bash
 http://localhost:3000/xmen/api/v1/mutant POST
 ```
 ##### Body:
-``` swift
+```json
 {
        "dna": [
               "ATGCGA",
@@ -87,11 +88,11 @@ http://localhost:3000/xmen/api/v1/mutant POST
 #### Api Hosteada:
 Servicio para validar si es mutante o humano:
 #### Endpoint:
-``` swift
+```bash
 https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/mutant POST
 ```
 #### Body:
-``` swift
+```json
 {
        "dna": [
               "ATGCGA",
@@ -107,11 +108,11 @@ https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/mutant POST
 #### Local:
 Servicio para traer los stats:
 ##### Endpoint:
-``` swift
+```bash
 http://localhost:3000/xmen/api/v1/stats GET
 ```
 ##### Response:
-``` swift
+```json
 {
     "count_mutant_dna": 1,
     "count_human_dna": 1,
@@ -121,11 +122,11 @@ http://localhost:3000/xmen/api/v1/stats GET
 #### Api Hosteada:
 Servicio para traer los stats:
 ##### Endpoint:
-``` swift
+```bash
 https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/stats GET
 ```
 ##### Response:
-``` swift
+```json
 {
     "count_mutant_dna": 1,
     "count_human_dna": 1,
@@ -133,7 +134,7 @@ https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/stats GET
 }
 ```
 #### Coverage:
-```
+```bash
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 -------------------------------|---------|----------|---------|---------|-------------------
@@ -164,7 +165,7 @@ All files                      |     100 |      100 |     100 |     100 |
 ```
 ### Carpetas
 
-```
+```text
 examen-mercado-libre
  +- app/     # Contiene todos los modulos
       |
@@ -235,4 +236,24 @@ examen-mercado-libre
  +- README.md # documentacion del proyecto 
  +- server.js # inicia el app para funcionamiento serverless 
  +- serverless.yml # configuracion serverless 
+```
+### Carga
+100 usuarios concurrentes realizando 1000 peticiones por segundo
+```bash
+siege "https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/stats" -d1 -r1000 -c100
+```
+#### Resultado
+```text
+Transactions:		       99992 hits
+Availability:		       99.99 %
+Elapsed time:		     1329.36 secs
+Data transferred:	        5.44 MB
+Response time:		        0.80 secs
+Transaction rate:	       75.22 trans/sec
+Throughput:		        0.00 MB/sec
+Concurrency:		       60.12
+Successful transactions:       99992
+Failed transactions:	           8
+Longest transaction:	        7.10
+Shortest transaction:	        0.12
 ```
