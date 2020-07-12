@@ -85,6 +85,7 @@ http://localhost:3000/xmen/api/v1/mutant POST
 }
 ```
 #### Api Hosteada:
+Servicio para validar si es mutante o humano:
 #### Endpoint:
 ``` swift
 https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/mutant POST
@@ -117,6 +118,7 @@ http://localhost:3000/xmen/api/v1/stats GET
 }
 ```
 #### Api Hosteada:
+Servicio para traer los stats:
 #### Endpoint:
 ``` swift
 https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/stats GET
