@@ -65,7 +65,7 @@ npm run local
 El programa esta desarrollado en `node (version 12)` exponiendo los servicios con `express` y usando arquitectura `serverless` para soportar la 
 carga de peticiones.
 ### Nivel 2:
-El API esta hosteada en `aws` usando `api gateway` y `lambda`, se está usando una base de datos no sql `Mongo`, instalada en `Mongo Atlas` 
+El API esta hosteada en `aws` usando `api gateway` y `lambda` (Free tier), se está usando una base de datos no sql `Mongo`, instalada en `Mongo Atlas`(Free tier) 
 #### Local:
 Servicio para validar si es mutante o humano:
 ##### Endpoint:
