@@ -67,11 +67,11 @@ carga de peticiones.
 El API esta hosteada en `aws` usando `api gateway` y `lambda`, se está usando una base de datos no sql `Mongo`, instalada en `Mongo Atlas` 
 #### Local:
 Servicio para validar si es mutante o humano:
-#### Endpoint:
+##### Endpoint:
 ``` swift
 http://localhost:3000/xmen/api/v1/mutant POST
 ```
-#### Body:
+##### Body:
 ``` swift
 {
        "dna": [
@@ -104,12 +104,13 @@ https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/mutant POST
 }
 ```
 ### Nivel 3:
+#### Local:
 Servicio para traer los stats:
-#### Endpoint:
+##### Endpoint:
 ``` swift
 http://localhost:3000/xmen/api/v1/stats GET
 ```
-#### Response:
+##### Response:
 ``` swift
 {
     "count_mutant_dna": 1,
@@ -119,11 +120,11 @@ http://localhost:3000/xmen/api/v1/stats GET
 ```
 #### Api Hosteada:
 Servicio para traer los stats:
-#### Endpoint:
+##### Endpoint:
 ``` swift
 https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/stats GET
 ```
-#### Response:
+##### Response:
 ``` swift
 {
     "count_mutant_dna": 1,
