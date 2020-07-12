@@ -1,0 +1,29 @@
+service: mercado-libre
+
+custom:
+  secrets: ${file(./config/config.js)}
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${self:custom.secrets.service}
+  region: us-east-1
+  environment: 
+    NODE_ENV: ${self:custom.secrets.env}
+    DEBUG: ${self:custom.secrets.debug}
+
+functions:
+  app:
+    handler: server.run
+    events:
+      - http:
+          path: /api/v1/mutant
+          method: POST
+          cors: true
+      - http:
+          path: /api/v1/stats
+          method: GET
+          cors: true
+
+plugins:
+  - serverless-offline

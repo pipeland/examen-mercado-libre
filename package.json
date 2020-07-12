@@ -1,0 +1,37 @@
+{
+  "name": "examen-mercado-libre",
+  "version": "1.0.0",
+  "description": "Examen MercadoLibre",
+  "main": "server.js",
+  "scripts": {
+    "test": "DEBUG=mutant:* MONGO_URL=mongodb://0.0.0.0:27017/mutant-test jest --forceExit --verbose",
+    "start": "node ./app/init/app.js",
+    "offline": "sls offline start --skipCacheInvalidation",
+    "coverage": "jest --coverage --forceExit && opener coverage/lcov-report/index.html",
+    "lint": "./node_modules/.bin/eslint --ext .js,md ."
+  },
+  "author": "Hernan Felipe Cubillos Calvachi",
+  "license": "MIT",
+  "devDependencies": {
+    "apidoc": "^0.23.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-markdown": "^1.0.2",
+    "jest": "^26.1.0",
+    "opener": "^1.5.1",
+    "serverless-offline": "^6.4.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "serverless": "^1.74.1",
+    "@hapi/boom": "^9.1.0",
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "i18n": "^0.10.0",
+    "mongoose": "^5.9.23",
+    "mongoose-timestamp": "^0.6.0",
+    "serverless-http": "^2.5.0"
+  }
+}

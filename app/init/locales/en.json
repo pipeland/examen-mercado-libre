@@ -1,0 +1,20 @@
+{
+	"res.ok is not a function": "res.ok is not a function",
+	"Cannot read property 'status' of undefined": "Cannot read property 'status' of undefined",
+	"mutantService_wrongMatrix": "mutantService_wrongMatrix",
+	"asd is not defined": "asd is not defined",
+	"Cannot read property 'length' of undefined": "Cannot read property 'length' of undefined",
+	"mutant validation failed: adn: Path `adn` is required.": "mutant validation failed: adn: Path `adn` is required.",
+	"Cannot read property 'horizontal' of undefined": "Cannot read property 'horizontal' of undefined",
+	"consol is not defined": "consol is not defined",
+	"Cannot read property '5' of undefined": "Cannot read property '5' of undefined",
+	"proces is not defined": "proces is not defined",
+	"Cannot read property '0' of undefined": "Cannot read property '0' of undefined",
+	"Cannot read property '1' of undefined": "Cannot read property '1' of undefined",
+	"object is not iterable (cannot read property Symbol(Symbol.iterator))": "object is not iterable (cannot read property Symbol(Symbol.iterator))",
+	"this.dna[i].replace is not a function": "this.dna[i].replace is not a function",
+	"d.validateMutant(...).find is not a function": "d.validateMutant(...).find is not a function",
+	"request entity too large": "request entity too large",
+	"Primise is not defined": "Primise is not defined",
+	"request size did not match content length": "request size did not match content length"
+}
