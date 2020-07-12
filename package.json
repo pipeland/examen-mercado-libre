@@ -6,8 +6,8 @@
   "scripts": {
     "test": "DEBUG=mutant:* MONGO_URL=mongodb://0.0.0.0:27017/mutant-test jest --forceExit --verbose",
     "start": "node ./app/init/app.js",
-    "offline": "sls offline start --skipCacheInvalidation",
-    "coverage": "jest --coverage --forceExit && opener coverage/lcov-report/index.html",
+    "local": "sls offline start --skipCacheInvalidation",
+    "coverage": "npm test --coverage --forceExit && opener coverage/lcov-report/index.html",
     "lint": "./node_modules/.bin/eslint --ext .js,md ."
   },
   "author": "Hernan Felipe Cubillos Calvachi",

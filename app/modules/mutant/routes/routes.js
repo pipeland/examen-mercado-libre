@@ -6,21 +6,31 @@ const mutantController = require('../controller/mutantController');
 module.exports = function mutantRoutes(app) {
   /**
    * @api {post} /api/v1/mutant POST
-   * @apiName CreateAgreement
+   * @apiName ValidateMutant
    * @apiGroup mutant
-   * @apiDescription Create a mutant into the database
+   * @apiDescription Validar si una cadena (DNA) es de humano o mutante
    * @apiVersion 1.0.0
-   *
-   * @apiHeaderExample {json} Header-Example:
-   *     {
-   *       "Authorization": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1OTBhMTZjNGQ3MGFhZTViN2VjYjFkYmMiLCJleHBpcmVzSW4iOjYzMDcyMDAwLCJpYXQiOjE0OTM4MzM1MzB9.A2j14f5qey7SHGhavBFNSPtNlovAxq9RODnVEqINpJQ"
-   *     }
-   * @apiParam {String} name for mutant.
    * @apiParamExample {json} Request-Example:
-   *
-   * @apiSuccessExample {JSON} old-response-example:
-   *
-   * @apiSuccessExample {JSON} response-example:
+   *{
+       "dna": [
+              "ATGCGA",
+              "CCGTGA",
+              "TTATGT",
+              "AGGAGG",
+              "CCTCTA",
+              "TCACTG"
+       ]
+    }
+   * @apiSuccessExample {JSON} response-example (success is mutant):
+   * 200
+   * {
+      "isMutant": true
+    }
+   * @apiSuccessExample {JSON} response-example (success is human):
+   * 403
+   * {
+      "isMutant": false
+    }
    */
   Router.post('/', mutantController.isMutant);
   Router.get('/', mutantController.isMutant);
