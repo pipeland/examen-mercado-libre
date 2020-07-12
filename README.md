@@ -66,6 +66,7 @@ carga de peticiones.
 ### Nivel 2:
 El API esta hosteada en `aws` usando `api gateway` y `lambda`, se está usando una base de datos no sql `Mongo`, instalada en `Mongo Atlas` 
 #### Local:
+Servicio para validar si es mutante o humano:
 Endpoint:
 ``` swift
 http://localhost:3000/xmen/api/v1/mutant POST
@@ -102,6 +103,7 @@ Body:
 }
 ```
 ### Nivel 3:
+Servicio para traer los stats:
 Endpoint:
 ``` swift
 http://localhost:3000/xmen/api/v1/stats GET
