@@ -1,10 +1,11 @@
 # examen-mercado-libre
 ## Contenido
-- [Desafio]()
-- [Instalacion]()
-- [Unit test]()
-- [Iniciar Microservicio]()
-- [Desarrollo]()
+- [Desafio](README.md#Desafio)
+- [Instalacion](README.md#Instalacion)
+- [Unit test](README.md#Unit test)
+- [Iniciar Microservicio](README.md#Iniciar Microservicio)
+- [Desarrollo](README.md#Desarrollo)
+- [Estructura de carpetas](README.md#Estructura de carpetas)
 
 ## Desafio
 ### Nivel 1:
@@ -154,4 +155,60 @@ All files                      |     100 |      100 |     100 |     100 |
  config                        |     100 |      100 |     100 |     100 |
   config.js                    |     100 |      100 |     100 |     100 |
 -------------------------------|---------|----------|---------|---------|-------------------
+```
+### Estructura de carpetas
+
+```
+examen-mercado-libre
+ +- app/     # Contiene todos los modulos
+      |
+      +- error-validator/
+        |
+        +-error-handler.js   # middleware para captura de errores y excepciones en la aplicacion
+        |
+      |
+      +- init/
+        |
+        +-locales/   # Mensajes i18n
+        |
+        +-app.js   # Main del proyecto se encarga de inicar la confugracion de los modulos
+        |
+        +-db.js   # configuracion de base de datos (MONGO)
+        | 
+      |
+      +- modules/ 
+        |
+        +- mutant/
+          |
+          +- controller/
+            |
+            +-mutantController.js # controlador con el metodo isMutant
+            |
+          +- model/
+            |
+            +-mutant.js # define el schema en mongoose
+            |
+          +- routes/
+            |
+            +-routes.js # define las rutas expuestas para mutant
+            |
+          +- service/
+            |
+            +-mutantService.js # contiene la logica de negocio para validar si es mutante
+            +-Dna.js # contiene la para el DNA
+            |
+          +- test/
+            |
+            +-mutant-create.test.js # pruebas unitarias para el modulo
+            |
+ +- config/  # Contiene las variables usuadas en la aplicacion
+ +- .esLintignore.json  # modulos ignorados por el eslint
+ +- .eslintrc.yml  # reglas de codigo
+ +- .gitignore.json  # archivos excluidos de git
+ +- docker-compose.yaml  # configuracion para base de datos local
+ +- jest.config  # configuracion para pruebas en ambiente node
+ +- package.json  # dependencias del proyecto y scripts
+ +- README.md # documentacion del proyecto 
+ +- server.js # incia el app para funcionamiento serverless 
+ +- serverless.yml # configuracion serverless 
 ```
