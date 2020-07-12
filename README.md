@@ -243,7 +243,7 @@ examen-mercado-libre
 siege "https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/stats" -d1 -r1000 -c100
 ```
 #### Resultado
-```text
+```bash
 Transactions:		       99992 hits
 Availability:		       99.99 %
 Elapsed time:		     1329.36 secs
