@@ -86,7 +86,7 @@ Body:
 #### Api Hosteada:
 Endpoint:
 ``` swift
- POST
+https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/mutant POST
 ```
 Body:
 ``` swift
@@ -117,7 +117,7 @@ Response:
 #### Api Hosteada:
 Endpoint:
 ``` swift
- GET
+https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/stats GET
 ```
 Response:
 ``` swift
@@ -228,6 +228,6 @@ examen-mercado-libre
  +- jest.config  # configuracion para pruebas en ambiente node
  +- package.json  # dependencias del proyecto y scripts
  +- README.md # documentacion del proyecto 
- +- server.js # incia el app para funcionamiento serverless 
+ +- server.js # inicia el app para funcionamiento serverless 
  +- serverless.yml # configuracion serverless 
 ```
