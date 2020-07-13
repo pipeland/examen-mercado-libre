@@ -238,7 +238,7 @@ examen-mercado-libre
  +- serverless.yml # configuracion serverless 
 ```
 ### Carga
-100 usuarios concurrentes realizando 1000 peticiones por segundo
+100 usuarios concurrentes realizando 1000 peticiones.
 ```bash
 siege "https://r4lwbdlmja.execute-api.us-east-1.amazonaws.com/xmen/api/v1/stats" -d1 -r1000 -c100
 ```
